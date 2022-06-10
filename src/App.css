@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap');
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container-page {
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.login-box {
+  padding: 20px;
+  max-width: 340px;
+  width: 80%;
+  /* background: blue; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-box h2{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.login-box .input-group {
+  width: 100%;
+  position: relative;
+}
+
+.login-box .input-group input {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 30px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #E0CDBF;
+}
+
+.login-box .input-group input:focus {  
+  box-shadow: 2px 2px 2px #0050B3;
+}
+
+.login-box .input-group .anticon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.ant-input-suffix {
+  position: absolute;
+  top: 0px;
+  right: 35px;
+}
+
+form > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #E0CDBF;
+  font-weight: 500;
+}
+
+.login-box button:hover {
+  background: #f0efeb
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.login-box button.primary:hover {
+background: #296fc4;
+}
+
+button.primary {
+  background: #0050B3;
+  color: #fff;
+  border: none;
+}
+
+.login-box > p {
+  font-size: 14px;
+  margin-top: 40px;
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: #0050B3;
+  font-weight: 400;
+}
+
+aside .ant-layout-sider-children .logo {
+  height: 32px;
+  margin: 16px 8px;
+  padding: 5px 15px;
+  line-height: 26px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+
+
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
 }
