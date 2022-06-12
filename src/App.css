@@ -18,19 +18,49 @@ body {
   align-items: center;
 }
 
-.login-box {
-  padding: 20px;
-  max-width: 340px;
-  width: 80%;
-  /* background: blue; */
-}
-
 .login-box h2{
   text-align: center;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+.login-box {
+  padding: 20px;
+  max-width: 340px;
+  /* width: 80%; */
+}
+
+.login-box button {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.login-box button.primary:hover {
+background: #296fc4;
+}
+
+button.primary {
+  background: #0050B3;
+  color: #fff;
+  border: none;
+}
+
+form > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.login-box > p {
+  font-size: 14px;
+  margin-top: 60px;
+  color: grey;
+}
+/*
 
 .login-box .input-group {
   width: 100%;
@@ -64,47 +94,13 @@ body {
   right: 35px;
 }
 
-form > p {
-  margin-bottom: 20px;
-  font-size: 14px;
-}
 
-.login-box button {
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 14px;
-  padding: 7px 10px;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid #E0CDBF;
-  font-weight: 500;
-}
-
-.login-box button:hover {
-  background: #f0efeb
-  }
-
-.login-box button.primary:hover {
-background: #296fc4;
-}
-
-button.primary {
-  background: #0050B3;
-  color: #fff;
-  border: none;
-}
-
-.login-box > p {
-  font-size: 14px;
-  margin-top: 40px;
-  color: grey;
-}
 
 a {
   text-decoration: none;
   color: #0050B3;
   font-weight: 400;
-}
+} */
 
 aside .ant-layout-sider-children .logo {
   height: 32px;

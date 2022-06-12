@@ -15,6 +15,7 @@ import { MenuProps, Table } from 'antd';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
 import { Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -38,8 +39,8 @@ const items: MenuItem[] = [
     getItem('Dashboard', '1', <AppstoreOutlined />),
     getItem('Orders', '2', <ShoppingOutlined />),
     getItem('Products', 'products', <TagOutlined />, [
-        getItem('All Products', '3'),
-        getItem('Inventory', '4'),
+        getItem('All Products', '3', ''),
+        getItem('Inventory', '4', ''),
         getItem('Category', '5'),
         getItem('Addons', '6'),
     ]),
@@ -48,6 +49,8 @@ const items: MenuItem[] = [
     getItem('CMS', 'sub2', <FileTextOutlined />, []),
     getItem('Marketing', 'sub3', <NotificationOutlined />, []),
     getItem('Settings', '8', <SettingOutlined />),
+    getItem('/login', 'Login', <SettingOutlined />),
+    getItem('Settings', '10', <SettingOutlined />),
 ];
 
 const { Title } = Typography;
@@ -63,7 +66,13 @@ const Home: React.FC = () => {
                     <span style={{ paddingLeft: '10px' }}>Srikopi</span>
                     <RightOutlined style={{ float: 'right', paddingTop: '5px' }} />
                 </div>
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                    <Menu.Item key="/">
+                        <HomeOutlined />
+                        <span>Home</span>
+                        <Link to=""></Link>
+                    </Menu.Item>
+                </Menu>
             </Sider>
             <Layout className="site-layout">
                 <Header className="site-layout-background" style={{ padding: 0 }}>
@@ -77,7 +86,7 @@ const Home: React.FC = () => {
                     <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                         <div style={{ fontWeight: '600' }}>List Product</div>
                         <Table>
-                            
+
                         </Table>
                     </div>
                 </Content>
