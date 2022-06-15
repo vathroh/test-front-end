@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { SyntheticEvent, useEffect } from 'react'
 import { Button, Form, Input } from 'antd';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { authActions } from '../../store';
 
-const Login: React.FC = () => {
+
+export interface ILoginPageProps {}
+
+
+const Login: React.FunctionComponent<ILoginPageProps> = () => {
+    
+    const dispatch = useDispatch();
+
+    useEffect(()=> {
+        dispatch(authActions.getAuth() )
+    }, [])
+
 
     const onFinish = (values: any) => {
-        console.log('Success:', values);
+        console.log('Success: ', values)
+
+        
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -17,7 +32,7 @@ const Login: React.FC = () => {
         <div className='container-page'>
             <div className='login-box'>
                 <h2>Admin</h2>
-                <Form
+                <Form                    
                     name="basic"
                     className="login-form"
                     labelCol={{ span: 32 }}

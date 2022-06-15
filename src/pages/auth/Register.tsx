@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Form, Input } from 'antd';
-import { LockOutlined, MailOutlined, PhoneOutlined, ShopOutlined, UserOutlined } from '@ant-design/icons';
+import { LockOutlined, MailOutlined, ShopOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 import CountryPhoneInput, {
@@ -9,9 +9,9 @@ import CountryPhoneInput, {
 } from 'antd-country-phone-input';
 import en from 'world_countries_lists/data/countries/en/world.json';
 
+export interface IRegisterPageProps {}
 
-
-const Register: React.FC = () => {
+const Register: React.FunctionComponent<IRegisterPageProps> = (props) => {
 
     const onFinish = (values: any) => {
         console.log('Success:', values);

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Layout() {
+function Layouts() {
   return (
     <div>Layout</div>
   )
 }
 
-export default Layout
+export default Layouts

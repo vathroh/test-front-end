@@ -11,11 +11,13 @@ const Router: React.FC = () => {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Home />}>
+                        <Route index element={<AllProducts />} />
+                        <Route path='all-products' element={<AllProducts />} />
+                    </Route>
                     <Route path='login' element={<Login />} />
                     <Route path='register' element={<Register />} />
                     <Route path='reset-password' element={<ResetPassword />} />
-                    <Route path='all-products' element={<AllProducts />} />
                 </Routes>
             </BrowserRouter>
         </>
